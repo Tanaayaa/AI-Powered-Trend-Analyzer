@@ -4,9 +4,10 @@ import { TrendingUp, Activity, Zap } from 'lucide-react'
 
 interface HeaderProps {
   isConnected: boolean
+  mode?: 'demo' | 'live'
 }
 
-export function Header({ isConnected }: HeaderProps) {
+export function Header({ isConnected, mode = 'demo' }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-4">
@@ -29,11 +30,11 @@ export function Header({ isConnected }: HeaderProps) {
           <div className="flex items-center gap-2">
             <div
               className={`h-2 w-2 rounded-full ${
-                isConnected ? 'bg-green-500' : 'bg-red-500'
+                isConnected ? 'bg-green-500' : 'bg-amber-500'
               }`}
             />
             <span className="text-xs text-muted-foreground">
-              {isConnected ? 'Connected' : 'Disconnected'}
+              {mode === 'live' ? 'Live' : 'Demo Mode'}
             </span>
           </div>
         </div>

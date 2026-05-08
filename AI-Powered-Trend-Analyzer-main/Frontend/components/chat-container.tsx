@@ -13,7 +13,7 @@ interface Message {
 }
 
 interface ChatContainerProps {
-  onConnectionChange: (connected: boolean) => void
+  onConnectionChange: (connected: boolean, mode: 'demo' | 'live') => void
 }
 
 export function ChatContainer({ onConnectionChange }: ChatContainerProps) {
@@ -34,9 +34,14 @@ export function ChatContainer({ onConnectionChange }: ChatContainerProps) {
     const checkHealth = async () => {
       try {
         const response = await fetch('/api/health')
-        onConnectionChange(response.ok)
+        if (response.ok) {
+          const data = await response.json()
+          onConnectionChange(true, data.mode || 'demo')
+        } else {
+          onConnectionChange(true, 'demo')
+        }
       } catch {
-        onConnectionChange(false)
+        onConnectionChange(true, 'demo')
       }
     }
     checkHealth()

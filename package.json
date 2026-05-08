@@ -9,6 +9,15 @@
     "lint": "cd AI-Powered-Trend-Analyzer-main/Frontend && npm run lint",
     "install:frontend": "cd AI-Powered-Trend-Analyzer-main/Frontend && npm install"
   },
-  "keywords": ["ai", "trend-analyzer", "nextjs", "react"],
-  "license": "MIT"
+  "keywords": [
+    "ai",
+    "trend-analyzer",
+    "nextjs",
+    "react"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lucide-react": "^1.14.0",
+    "react": "^19.2.6"
+  }
 }

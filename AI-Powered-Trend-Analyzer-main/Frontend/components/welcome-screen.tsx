@@ -1,6 +1,6 @@
 'use client'
 
-import { TrendingUp, Twitter, MessageCircle, BarChart3, Zap, Search } from 'lucide-react'
+import { TrendingUp, Hash, MessageCircle, BarChart3, Zap, Search } from 'lucide-react'
 
 interface WelcomeScreenProps {
   onSuggestionClick: (suggestion: string) => void
@@ -8,8 +8,8 @@ interface WelcomeScreenProps {
 
 const suggestions = [
   {
-    icon: Twitter,
-    text: 'What are the top trending topics on Twitter today?',
+    icon: Hash,
+    text: 'What are the top trending topics on social media today?',
   },
   {
     icon: BarChart3,
