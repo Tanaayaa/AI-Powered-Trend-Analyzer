@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "AI-Powered-Trend-Analyzer-main/backend/app.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "AI-Powered-Trend-Analyzer-main/backend/app.py"
+    }
+  ]
+}

@@ -11,6 +11,3 @@ dependencies = [
     "python-dotenv>=1.2.2",
     "tweepy>=4.16.0",
 ]
-
-[tool.vercel]
-entrypoint = "AI-Powered-Trend-Analyzer/backend/app.py"
