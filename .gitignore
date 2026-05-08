@@ -6,3 +6,5 @@ tempCodeRunnerFile.py
 __pycache__
 *.ipynb_checkpoints
 chroma
+.vercel
+.env*.local

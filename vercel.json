@@ -3,12 +3,28 @@
     {
       "src": "AI-Powered-Trend-Analyzer-main/backend/app.py",
       "use": "@vercel/python"
+    },
+    {
+      "src": "AI-Powered-Trend-Analyzer-main/Frontend/(.*)",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/generate",
       "dest": "AI-Powered-Trend-Analyzer-main/backend/app.py"
+    },
+    {
+      "src": "/health",
+      "dest": "AI-Powered-Trend-Analyzer-main/backend/app.py"
+    },
+    {
+      "src": "/",
+      "dest": "AI-Powered-Trend-Analyzer-main/Frontend/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "AI-Powered-Trend-Analyzer-main/Frontend/$1"
     }
   ]
 }

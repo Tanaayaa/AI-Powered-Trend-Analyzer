@@ -66,6 +66,28 @@ _To use your API key, make a new file named .env and add the following line._
    ```js
    BEARER_TOKEN=your-token-here // make sure not to add any spaces in between
    ```
+
+## Deploying to Vercel
+
+1. Install Vercel CLI:
+   ```sh
+   npm install -g vercel
+   ```
+2. Log in:
+   ```sh
+   vercel login
+   ```
+3. Add production environment variables in the Vercel dashboard or via CLI:
+   - `OLLAMA_BASE_URL`
+   - `OLLAMA_MODEL`
+   - `BEARER_TOKEN` (if you use Twitter scraping)
+4. Deploy from the project root:
+   ```sh
+   vercel
+   ```
+
+> Your backend uses Ollama, so `OLLAMA_BASE_URL` must point to a reachable Ollama server.
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
